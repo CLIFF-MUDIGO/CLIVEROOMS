@@ -4,6 +4,8 @@ const app = express();
 
 const dbConfig = require('./db');
 const mongoose = require('mongoose');
+const roomsRoute = require('./routes/roomsRoute');
+app.use('/api/rooms', roomsRoute);
 
 const port = process.env.PORT || 5000;
 
